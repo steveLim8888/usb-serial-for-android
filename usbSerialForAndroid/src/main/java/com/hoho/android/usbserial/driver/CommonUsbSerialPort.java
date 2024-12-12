@@ -148,6 +148,7 @@ public abstract class CommonUsbSerialPort implements UsbSerialPort {
         mUsbRequest = null;
         try {
             usbRequest.cancel();
+            usbRequest.close();
         } catch(Exception ignored) {}
         try {
             closeInt();
